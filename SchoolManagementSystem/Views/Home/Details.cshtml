@@ -1,0 +1,14 @@
+﻿@model SchoolManagementSystem.Models.TaskItem
+
+<h1>Task Details</h1>
+
+<div>
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    <p>Status: @(Model.IsCompleted ? "Completed" : "Pending")</p>
+    <p>User: @(Model.User?.Email ?? "No user assigned")</p>
+</div>
+
+<p>
+    <a asp-controller="Tasks" asp-action="Index" class="btn btn-secondary">Back to List</a>
+</p>
